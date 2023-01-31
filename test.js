@@ -25,8 +25,6 @@ app.get('/', function (req, res) {
   var code = encodeURIComponent(buffer);
   var urlendpoint = endpoint + '/' + code;
   return res.send({
-    status: 1,
-    code: code,
     ResultDescription: urlendpoint,
   });
 });
