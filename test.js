@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
     return res.send('invalid gws token');
   }
   console.log(ver);
-  //endpoint = '/gwstokenlogin';
+  endpoint = '/gwstokenlogin';
   var ensite = md5(gwstoken + auth_salt);
   var buffer = new Buffer(gwstoken + ':' + ensite).toString('base64');
   var code = encodeURIComponent(buffer);
